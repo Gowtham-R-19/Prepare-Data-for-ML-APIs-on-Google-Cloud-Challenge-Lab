@@ -4,7 +4,7 @@
 #             Google Cloud Lab Automation Script                #
 #          Author: Gowtham R                                    #
 #             Purpose: Automate BigQuery, Dataflow,             #
-#                      ML & Dataproc tasks                      #
+#                      ML & Dataproc tasks                      # 
 #===============================================================#
 
 # ===========================

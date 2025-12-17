@@ -52,11 +52,11 @@ get_input() {
 
 #---------------------------- User Inputs ----------------------------#
 echo "==================== User Inputs ===================="
-get_input "Enter the DATASET value:" "DATASET"
-get_input "Enter the BUCKET value:" "BUCKET"
-get_input "Enter the TABLE value:" "TABLE"
-get_input "Enter the BUCKET_URL_1 value:" "BUCKET_URL_1"
-get_input "Enter the BUCKET_URL_2 value:" "BUCKET_URL_2"
+get_input "Enter the DATASET Name:" "DATASET"
+get_input "Enter the BUCKET Name:" "BUCKET"
+get_input "Enter the TABLE Name:" "TABLE"
+get_input "Enter the RESULT_BUCKET_URL_1 value:" "BUCKET_URL_1"
+get_input "Enter the RESULT_BUCKET_URL_2 value:" "BUCKET_URL_2"
 echo "====================================================="
 echo
 

@@ -75,9 +75,24 @@ echo "${MAGENTA}${BOLD}Getting API key string...${RESET}"
 API_KEY=$(gcloud alpha services api-keys get-key-string $KEY_NAME --format="value(keyString)")
 
 # Step 5: Get default Google Cloud region
-echo "${CYAN}${BOLD}Getting default Google Cloud region...${RESET}"
-export REGION=$(gcloud compute project-info describe \
+# Step 5: Get default Google Cloud region and confirm with user
+echo "${CYAN}${BOLD}Checking default Google Cloud region...${RESET}"
+DEFAULT_REGION=$(gcloud compute project-info describe \
 --format="value(commonInstanceMetadata.items[google-compute-default-region])")
+
+echo "Default region detected: ${DEFAULT_REGION}"
+echo -n "${BOLD}${YELLOW}Is this the correct region? (Y/N): ${RESET}"
+read region_check
+
+if [[ "$region_check" == "Y" || "$region_check" == "y" ]]; then
+    REGION=$DEFAULT_REGION
+    echo "${GREEN}Using default region: $REGION${RESET}"
+else
+    echo -n "${BOLD}${YELLOW}Enter the desired Google Cloud region: ${RESET}"
+    read REGION
+    echo "${GREEN}Using custom region: $REGION${RESET}"
+fi
+
 
 # Step 6: Retrieve project ID
 echo "${RED}${BOLD}Retrieving project ID...${RESET}"

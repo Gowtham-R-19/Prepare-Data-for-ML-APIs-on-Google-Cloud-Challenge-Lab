@@ -217,7 +217,6 @@ gcloud dataproc jobs submit spark --cluster=awesome --region=$REGION \
 #---------------------------- Completion ----------------------------#
 echo
 echo "${GREEN}${BOLD}Lab completed successfully!${RESET}"
-echo "${YELLOW}${BOLD}Subscribe to Dr. Abhishek: https://www.youtube.com/@drabhishek.5460/videos${RESET}"
 echo
 
 #---------------------------- Cleanup Function ----------------------------#
